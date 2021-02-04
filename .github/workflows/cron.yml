@@ -8,6 +8,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
+      API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+      TRN_API_KEY: ${{ secrets.TRN_API_KEY }}
+      APEX_USER_IDENTIFIER: ${{ secrets.APEX_USER_IDENTIFIER }}
+      TWITTER_USER_NAME_TEMPLATE: ${{ secrets.TWITTER_USER_NAME_TEMPLATE }}
 
     steps:
       - uses: actions/checkout@v1
