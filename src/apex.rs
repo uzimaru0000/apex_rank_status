@@ -2,18 +2,18 @@ use reqwest::RequestBuilder;
 
 use crate::model::Stat;
 
-pub enum PlatFrom {
+pub enum Platform {
     Origin,
     PS,
     XBOX,
 }
 
-impl PlatFrom {
+impl Platform {
     fn to_string(&self) -> String {
         match self {
-            PlatFrom::Origin => String::from("origin"),
-            PlatFrom::PS => String::from("ps"),
-            PlatFrom::XBOX => String::from("xbox"),
+            Platform::Origin => String::from("origin"),
+            Platform::PS => String::from("ps"),
+            Platform::XBOX => String::from("xbox"),
         }
     }
 }
@@ -42,7 +42,7 @@ impl Rank {
     }
 }
 
-pub fn get_status(api_key: &str, platform: PlatFrom, user_identifier: &str) -> RequestBuilder {
+pub fn get_status(api_key: &str, platform: Platform, user_identifier: &str) -> RequestBuilder {
     let url = create_endpoint(&platform.to_string(), user_identifier);
     let client = reqwest::Client::new();
 

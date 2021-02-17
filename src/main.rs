@@ -8,7 +8,7 @@ async fn main() -> Result<()> {
 
     let res = apex::get_status(
         &env.trn_api_key,
-        apex::PlatFrom::Origin,
+        apex::Platform::Origin,
         &env.apex_user_identifier,
     )
     .send()
