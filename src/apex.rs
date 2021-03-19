@@ -34,7 +34,7 @@ impl Rank {
             Rank::Bronze => String::from("🟫"),
             Rank::Silver => String::from("⬜️"),
             Rank::Gold => String::from("🟨"),
-            Rank::Platinum => String::from("🟦"),
+            Rank::Platinum => String::from("💍"),
             Rank::Diamond => String::from("💎"),
             Rank::Master => String::from("⚛️"),
             Rank::Predator => String::from("👹"),
